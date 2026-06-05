@@ -77,30 +77,34 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // 2. Script đóng/mở Menu Điện thoại
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.getElementById('nav-links');
-    const closeMenu = document.getElementById('close-menu');
-    const overlay = document.getElementById('menu-overlay');
+    // 2. Script đóng/mở Menu Điện thoại (Đã bọc DOMContentLoaded)
+    document.addEventListener("DOMContentLoaded", function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        const closeMenu = document.getElementById('close-menu');
+        const overlay = document.getElementById('menu-overlay');
 
-    if(mobileMenu && navLinks) {
-        // Mở menu
-        mobileMenu.addEventListener('click', function() {
-            navLinks.classList.add('active');
-            overlay.classList.add('active');
-        });
-        // Đóng menu khi bấm X
-        closeMenu.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-        // Đóng menu khi bấm ra ngoài khoảng đen
-        overlay.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-    }
-    </script>
+        if(mobileMenu && navLinks) {
+            mobileMenu.addEventListener('click', function() {
+                navLinks.classList.add('active');
+                if(overlay) overlay.classList.add('active');
+            });
+            
+            if(closeMenu) {
+                closeMenu.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    if(overlay) overlay.classList.remove('active');
+                });
+            }
+            
+            if(overlay) {
+                overlay.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            }
+        }
+    });
     </script>
 </body>
 </html>
