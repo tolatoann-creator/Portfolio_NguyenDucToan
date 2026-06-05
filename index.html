@@ -77,7 +77,7 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // 2. Script đóng/mở Menu Điện thoại (Đã bọc DOMContentLoaded)
+    // 2. Script Menu Điện thoại - ÉP BẰNG JS TRỰC TIẾP
     document.addEventListener("DOMContentLoaded", function() {
         const mobileMenu = document.getElementById('mobile-menu');
         const navLinks = document.getElementById('nav-links');
@@ -85,22 +85,32 @@
         const overlay = document.getElementById('menu-overlay');
 
         if(mobileMenu && navLinks) {
+            // Khi bấm nút 3 gạch -> Ép kéo menu ra
             mobileMenu.addEventListener('click', function() {
-                navLinks.classList.add('active');
-                if(overlay) overlay.classList.add('active');
+                navLinks.style.setProperty("left", "0", "important");
+                if(overlay) {
+                    overlay.style.setProperty("opacity", "1", "important");
+                    overlay.style.setProperty("visibility", "visible", "important");
+                }
             });
             
+            // Khi bấm nút X -> Ép giấu menu đi
             if(closeMenu) {
                 closeMenu.addEventListener('click', function() {
-                    navLinks.classList.remove('active');
-                    if(overlay) overlay.classList.remove('active');
+                    navLinks.style.setProperty("left", "-100%", "important");
+                    if(overlay) {
+                        overlay.style.setProperty("opacity", "0", "important");
+                        overlay.style.setProperty("visibility", "hidden", "important");
+                    }
                 });
             }
             
+            // Khi bấm ra vùng đen -> Ép giấu menu đi
             if(overlay) {
                 overlay.addEventListener('click', function() {
-                    navLinks.classList.remove('active');
-                    overlay.classList.remove('active');
+                    navLinks.style.setProperty("left", "-100%", "important");
+                    overlay.style.setProperty("opacity", "0", "important");
+                    overlay.style.setProperty("visibility", "hidden", "important");
                 });
             }
         }
