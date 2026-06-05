@@ -69,28 +69,38 @@
     </footer>
 
     <script>
+    // 1. Hiệu ứng Fade-in
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) { entry.target.classList.add('visible'); }
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    // Script đóng/mở Menu Điện thoại
+
+    // 2. Script đóng/mở Menu Điện thoại
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
     const closeMenu = document.getElementById('close-menu');
     const overlay = document.getElementById('menu-overlay');
 
-    function toggleMenu() {
-      navLinks.classList.toggle('active');
-      overlay.classList.toggle('active');
+    if(mobileMenu && navLinks) {
+        // Mở menu
+        mobileMenu.addEventListener('click', function() {
+            navLinks.classList.add('active');
+            overlay.classList.add('active');
+        });
+        // Đóng menu khi bấm X
+        closeMenu.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+        // Đóng menu khi bấm ra ngoài khoảng đen
+        overlay.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+        });
     }
-
-    if(mobileMenu) {
-        mobileMenu.addEventListener('click', toggleMenu);
-        closeMenu.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu); // Bấm ra ngoài màn hình tối cũng tự đóng
-    }
+    </script>
     </script>
 </body>
 </html>

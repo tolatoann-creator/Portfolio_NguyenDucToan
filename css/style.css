@@ -657,8 +657,7 @@ footer {
 
 @media (max-width: 768px) {
   /* Giữ logo và nút Hamburger nằm ngang hàng */
-  nav { flex-direction: row; justify-content: space-between; align-items: center; padding: 1rem 8%; }
-  
+  nav { flex-direction: row-reverse; justify-content: space-between; align-items: center; padding: 1rem 8%; }
   /* Hiện nút Hamburger */
   .menu-toggle { display: flex; }
   
@@ -676,7 +675,7 @@ footer {
   }
   
   /* Lớp class dùng để kéo menu ra */
-  .nav-links.active { left: 0; }
+  .nav-links.active { left: 0 !important; }
   
   /* Nút X đóng menu */
   .close-menu { display: block; align-self: flex-start; }
