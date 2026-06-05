@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html" style="color: var(--accent);">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <section id="reflection" style="padding-top: 8rem; min-height: 80vh;">
+      <div class="section-label">Tổng kết & Phản tư</div>
+      <div class="reflection-grid">
+        
+        <div>
+          <h2 class="reflection-heading fade-in">15 tuần, một sự trưởng thành hoàn toàn</h2>
+          
+          <div class="growth-block fade-in">
+            <div class="growth-label">Sự thay đổi #1 — Cách tiếp cận AI</div>
+            <div class="growth-before">"Làm sao để ChatGPT giúp tôi hoàn thành bài tập nhanh nhất?"</div>
+            <div class="growth-after">"Làm sao để sử dụng ChatGPT để tôi hiểu sâu hơn chủ đề này?"</div>
+          </div>
+          
+          <div class="growth-block fade-in">
+            <div class="growth-label">Sự thay đổi #2 — Đánh giá thông tin</div>
+            <div class="growth-before">"Google kết quả thứ nhất → OK, dùng cái này."</div>
+            <div class="growth-after">"Ai viết? Có uy tín không? Có bias nào không? Còn liên quan không?"</div>
+          </div>
+          
+          <div class="growth-block fade-in">
+            <div class="growth-label">Sự thay đổi #3 — Quan hệ với công nghệ</div>
+            <div class="growth-before">"AI quá mạnh, tôi không biết cách kiểm soát nó."</div>
+            <div class="growth-after">"AI là công cụ. Nó mạnh, nhưng tôi có thể sử dụng có trách nhiệm."</div>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          
+          <p style="font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-3); margin-bottom:1.25rem;">Mức độ trưởng thành</p>
+          <table class="skills-table">
+            <thead>
+              <tr>
+                <th>Lĩnh vực</th>
+                <th style="text-align:right">Đánh giá</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Quản lý dữ liệu & tệp tin</td><td><span class="stars">★★★★★</span></td></tr>
+              <tr><td>Tìm kiếm & đánh giá phê phán</td><td><span class="stars">★★★★★</span></td></tr>
+              <tr><td>Prompt Engineering</td><td><span class="stars">★★★★</span></td></tr>
+              <tr><td>Quản lý dự án & cộng tác</td><td><span class="stars">★★★★★</span></td></tr>
+              <tr><td>Sáng tạo nội dung số</td><td><span class="stars">★★★★</span></td></tr>
+              <tr><td>Đạo đức & trách nhiệm AI</td><td><span class="stars">★★★★★</span></td></tr>
+            </tbody>
+          </table>
+          
+          <div style="margin-top:3rem;">
+            <p style="font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-3); margin-bottom:1rem;">Định hướng tương lai</p>
+            <div style="display:flex; flex-direction:column; gap:0.5rem;">
+              <div style="padding:1rem; background:var(--accent-2-light); border-left:2px solid var(--accent-2); font-size:1.05rem; color:var(--ink-2);">
+                <strong>Ngắn hạn:</strong> Áp dụng 7 nguyên tắc vào mọi môn học, học Python cho Data Science
+              </div>
+              <div style="padding:1rem; background:var(--accent-light); border-left:2px solid var(--accent); font-size:1.05rem; color:var(--ink-2);">
+                <strong>Trung hạn:</strong> Khóa học Responsible AI, thực tập công ty tech, viết blog AI ethics
+              </div>
+              <div style="padding:1rem; background:var(--bg); border-left:2px solid var(--border); font-size:1.05rem; color:var(--ink-2);">
+                <strong>Dài hạn:</strong> Data Scientist / AI Product Manager, whitepaper AI có trách nhiệm Việt Nam
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

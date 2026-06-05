@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Dự Án 5 | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--surface);">
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html" style="color: var(--accent);">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-container fade-in" style="padding-top: 8rem;">
+        <a href="projects.html" class="back-link">← Quay lại danh sách dự án</a>
+        
+        <div class="detail-grid">
+            <div>
+              <h3 class="detail-heading">Bài 5 — Sáng Tạo Nội Dung Số</h3>
+              <div class="detail-section">
+                <div class="detail-section-title">Quy trình 3 giai đoạn</div>
+                <ul class="result-list">
+                  <li><strong>ChatGPT</strong> — Phác thảo nội dung (AI 45%, Tôi 55%)</li>
+                  <li><strong>DALL-E 3</strong> — Tạo hình ảnh (AI 25%, Tôi 75% hậu kỳ)</li>
+                  <li><strong>Canva</strong> — Thiết kế layout (AI 0%, Tôi 100%)</li>
+                </ul>
+              </div>
+              <div class="detail-section">
+                <div class="detail-section-title">Sản phẩm</div>
+                <p class="detail-text">Tiểu sử đạo diễn Wes Anderson: 2500+ từ, minh họa nghệ thuật pastel, layout magazine. Mọi tỷ lệ đóng góp AI đều được công khai minh bạch.</p>
+              </div>
+            </div>
+            <div>
+              <div class="detail-section">
+                <div class="detail-section-title">Bài học rút ra</div>
+                <ol class="lesson-list">
+                  <li><strong>AI là công cụ, không phải thay thế.</strong> Ranh giới giữa hỗ trợ và lạm dụng.</li>
+                  <li><strong>Tỷ lệ đóng góp phụ thuộc bản chất tác vụ,</strong> không phải cố định 50-50.</li>
+                  <li><strong>Sáng tạo = Tạo ra + Sửa chữa.</strong> Không ai (kể cả AI) tạo ra tác phẩm hoàn hảo từ lần đầu.</li>
+                </ol>
+              </div>
+            </div>
+        </div>
+        
+        <div class="download-group" style="margin-top: 3rem;">
+            <a href="bai5.pdf" download class="download-btn">⬇ Tải Bài 5 (PDF)</a>
+        </div>
+    </div>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

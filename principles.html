@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyên Tắc | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html">Dự án</a></li>
+        <li><a href="principles.html" style="color: var(--accent);">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <section id="principles" class="principles-section fade-in" style="padding-top: 8rem; min-height: 80vh;">
+      <div class="section-label">Nguyên tắc AI</div>
+      <h2 class="principles-heading">Bộ 7 Nguyên Tắc Cá Nhân</h2>
+      <p class="principles-sub">Không phải "tuân thủ vì sợ bị phạt", mà là "làm đúng vì tôi tin vào nó".</p>
+      
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="principle-num">01</div>
+          <div class="principle-title">Minh bạch tuyệt đối</div>
+          <p class="principle-text">Luôn khai báo rõ ràng phần nào, công cụ AI nào đã được sử dụng trong mọi bài nộp — không có ngoại lệ.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-num">02</div>
+          <div class="principle-title">AI là công cụ, tôi là tác giả</div>
+          <p class="principle-text">Ý tưởng trung tâm và "cái tôi" của tác phẩm luôn là của tôi. AI chỉ hỗ trợ ngôn ngữ và chi tiết kỹ thuật.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-num">03</div>
+          <div class="principle-title">Kiểm chứng trước khi tin</div>
+          <p class="principle-text">Không sử dụng thông tin từ AI mà không tự kiểm tra với các nguồn tài liệu gốc. AI có hiện tượng "hallucination".</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-num">04</div>
+          <div class="principle-title">Bảo vệ quyền riêng tư</div>
+          <p class="principle-text">Tuyệt đối không đưa dữ liệu cá nhân, bảo mật, hoặc nhạy cảm vào bất kỳ hệ thống AI nào.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-num">05</div>
+          <div class="principle-title">Luyện tập tư duy độc lập</div>
+          <p class="principle-text">Tự làm bản nháp đầu tiên trước khi dùng AI để cải thiện — không lấy AI làm điểm khởi đầu.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-num">06</div>
+          <div class="principle-title">Dùng AI để học sâu hơn</div>
+          <p class="principle-text">Sử dụng AI như "Socratic tutor" — đặt câu hỏi để tôi tự trả lời, thay vì chỉ cung cấp đáp án.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-num">07</div>
+          <div class="principle-title">Cập nhật liên tục chuẩn mực</div>
+          <p class="principle-text">Chủ động theo dõi các quy định mới, chuẩn mực đạo đức AI trong học thuật. Đạo đức là quá trình liên tục.</p>
+        </div>
+
+        <div class="principle-card" style="grid-column: 2 / -1; padding: 1.5rem; display: flex; gap: 1rem; background: var(--surface); justify-content: space-between; align-items: stretch;">
+          
+          <img src="image_8bd0c0.png" alt="AI Law" class="fade-in" style="flex: 1; width: 32%; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          
+          <img src="image_8bcd55.jpg" alt="Human Mind" class="fade-in" style="flex: 1; width: 32%; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          
+          <img src="image_8bc901.jpg" alt="AI Hallucination" class="fade-in" style="flex: 1; width: 32%; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

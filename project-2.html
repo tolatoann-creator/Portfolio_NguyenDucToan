@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Dự Án 2 | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--surface);">
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html" style="color: var(--accent);">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-container fade-in" style="padding-top: 8rem;">
+        <a href="projects.html" class="back-link">← Quay lại danh sách dự án</a>
+        
+        <div class="detail-grid">
+            <div>
+              <h3 class="detail-heading">Bài 2 — Khai thác dữ liệu & Đánh Giá Thông Tin</h3>
+              <div class="detail-section">
+                <div class="detail-section-title">Chiến lược tìm kiếm</div>
+                <p class="detail-text">Từ 2.5 tỷ kết quả Google xuống còn 200 kết quả chính xác bằng cách kết hợp 5 toán tử: <code>site:</code>, <code>filetype:</code>, <code>intitle:</code>, <code>inurl:</code>, và toán tử logic AND/OR/-.</p>
+              </div>
+              <div class="detail-section">
+                <div class="detail-section-title">Khung đánh giá 6 tiêu chí</div>
+                <ul class="result-list">
+                  <li>Tác giả — có chuyên môn không?</li>
+                  <li>Cơ quan xuất bản — uy tín không?</li>
+                  <li>Phương pháp — có bằng chứng không?</li>
+                  <li>Trích dẫn — bao nhiêu người tham khảo?</li>
+                  <li>Tính cập nhật — còn liên quan không?</li>
+                  <li>Bias — tác giả có lợi ích gì?</li>
+                </ul>
+              </div>
+              <div class="detail-section">
+                <div class="detail-section-title">Kết quả</div>
+                <ul class="result-list">
+                  <li>Bài luận 800–1000 từ, 11 tài liệu uy tín cao</li>
+                  <li>Thời gian tìm tài liệu giảm từ 2–3 giờ xuống 30–45 phút</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="detail-section">
+                <div class="detail-section-title">Bài học rút ra</div>
+                <ol class="lesson-list">
+                  <li><strong>Tìm kiếm là một nghệ thuật.</strong> Thay vì dùng cùng một cách cho tất cả, cần thích ứng chiến lược theo loại tài liệu.</li>
+                  <li><strong>Đánh giá quan trọng hơn tìm kiếm.</strong> Dễ tìm 1 triệu kết quả, khó chọn 10 kết quả tốt nhất.</li>
+                  <li><strong>Nguồn tin không trung lập.</strong> Paper được tài trợ bởi công ty A sẽ có xu hướng "khen" công nghệ của A.</li>
+                  <li><strong>Google Scholar ≠ Google thường ngày.</strong> Nếu chỉ dùng Google.com, bỏ lỡ 90% tài liệu học thuật chất lượng.</li>
+                </ol>
+              </div>
+            </div>
+        </div>
+        
+        <div class="download-group" style="margin-top: 3rem;">
+            <a href="Bai2_ToiUuHoaCongCuSo.pdf" download class="download-btn">⬇ Tải Bài 2 (PDF)</a>
+        </div>
+    </div>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

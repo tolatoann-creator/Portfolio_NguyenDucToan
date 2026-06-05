@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Dự Án 6 | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--surface);">
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html" style="color: var(--accent);">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-container fade-in" style="padding-top: 8rem;">
+        <a href="projects.html" class="back-link">← Quay lại danh sách dự án</a>
+        
+        <div class="detail-grid">
+            <div>
+              <h3 class="detail-heading">Bài 6 — An Toàn & Liêm Chính Học Thuật</h3>
+              <div class="detail-section">
+                <div class="detail-section-title">Ba vấn đề đạo đức phân tích</div>
+                <ul class="result-list">
+                  <li>Ranh giới "hỗ trợ" vs "gian lận" học thuật</li>
+                  <li>Quyền sở hữu trí tuệ & trích dẫn AI</li>
+                  <li>Tác động Cognitive Offloading đến học tập</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="detail-section">
+                <div class="detail-section-title">Bộ 7 nguyên tắc cá nhân</div>
+                <ol class="lesson-list">
+                  <li><strong>Minh bạch tuyệt đối</strong> — luôn khai báo AI đã dùng</li>
+                  <li><strong>AI là công cụ, tôi là tác giả</strong> — ý tưởng trung tâm phải là của tôi</li>
+                  <li><strong>Kiểm chứng trước khi tin</strong> — không dùng thông tin AI chưa xác minh</li>
+                  <li><strong>Bảo vệ quyền riêng tư</strong> — không đưa dữ liệu cá nhân vào AI</li>
+                  <li><strong>Luyện tập tư duy độc lập</strong> — tự làm bản nháp trước</li>
+                  <li><strong>Dùng AI để học sâu hơn</strong> — AI là Socratic tutor, không phải answer bot</li>
+                  <li><strong>Cập nhật liên tục chuẩn mực</strong> — đạo đức AI evolve theo thời gian</li>
+                </ol>
+              </div>
+            </div>
+        </div>
+        
+        <div class="download-group" style="margin-top: 3rem;">
+            <a href="bai6.pdf" download class="download-btn">⬇ Tải Bài 6 (PDF)</a>
+        </div>
+    </div>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

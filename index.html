@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="index.html" style="color: var(--accent);">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" style="min-height: 100vh; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 4rem;">
+      
+      <div style="flex: 1;">
+        <div class="hero-eyebrow">Portfolio học thuật · Học kỳ 2025-2026</div>
+        
+        <h1 class="fade-in" style="max-width: 100%;">
+          Hành Trình Khám Phá<br>
+          <em>Công Nghệ Số</em><br>
+          & Trí Tuệ Nhân Tạo
+          
+          <span style="display: inline-block; font-family: var(--sans); font-size: 1.2rem; font-weight: normal; color: var(--ink-2); line-height: 1.5; vertical-align: middle; margin-left: 1.5rem; white-space: nowrap;">
+            Với 6 dự án , 15 tuần , một sự trưởng thành hoàn toàn .
+          </span>
+        </h1>
+        
+      </div>
+
+      <div class="fade-in" style="flex: 1; display: flex; justify-content: flex-end;">
+        <img src="image_8c48d9.jpg" alt="Công nghệ số và AI" style="width: 100%; max-width: 600px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); object-fit: cover;">
+      </div>
+
+    </section>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

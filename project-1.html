@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Dự Án 1 | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--surface);">
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html" style="color: var(--accent);">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-container fade-in" style="padding-top: 6rem;">
+        <a href="projects.html" class="back-link">← Quay lại danh sách dự án</a>
+        
+        <div class="detail-grid">
+            <div>
+              <h3 class="detail-heading">Bài 1 — Quản Lý & Tổ Chức Tài Liệu</h3>
+              <div class="detail-section">
+                <div class="detail-section-title">Giới thiệu</div>
+                <p class="detail-text">Bài tập tưởng chừng đơn giản — chỉ là "tổ chức thư mục và đặt tên tệp tin" — nhưng lại chứa đựng một trong những kỹ năng cơ bản nhất của người làm việc trong lĩnh vực công nghệ: khả năng xây dựng hệ thống sạch, logic, và có thể mở rộng.</p>
+              </div>
+              <div class="detail-section">
+                <div class="detail-section-title">Quy chuẩn đặt tên tệp</div>
+                <p class="detail-text" style="font-family:monospace; background:var(--bg); padding:0.75rem; border-radius:4px; font-size:0.85rem;">[Loại]_[Ngày]_[Mô_Tả]_v[Phiên_Bản].[ext]<br><br>Ví dụ:<br>RPT_20250605_Bài1_Cấu_Trúc_v1.0.pdf</p>
+              </div>
+              <div class="detail-section">
+                <div class="detail-section-title">Kết quả đạt được</div>
+                <ul class="result-list">
+                  <li>Cấu trúc thư mục 3–4 tầng, logic và có thể mở rộng</li>
+                  <li>Quy chuẩn áp dụng nhất quán trên tất cả dự án</li>
+                  <li>Thời gian tìm tệp giảm từ 5–10 phút xuống &lt;30 giây</li>
+                  <li>Cải thiện khả năng cộng tác nhóm đáng kể</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="detail-section">
+                <div class="detail-section-title">Bài học rút ra</div>
+                <ol class="lesson-list">
+                  <li><strong>Chi tiết là cách thể hiện chuyên nghiệp.</strong> Cách đặt tên tệp hay tổ chức thư mục không bao giờ là "không quan trọng".</li>
+                  <li><strong>Hệ thống phải thiết kế cho tương lai.</strong> Khi bạn có 100 dự án, bạn vẫn có thể quản lý được không?</li>
+                  <li><strong>Tiêu chuẩn hóa = Giải phóng thời gian.</strong> Một khi hệ thống đã rõ ràng, không cần lãng phí tâm trí vào "tệp này để ở đâu?"</li>
+                  <li><strong>Công cụ không phải mục tiêu, mà là phương tiện.</strong> Windows, Mac hay Linux — nguyên tắc tổ chức vẫn giống nhau.</li>
+                </ol>
+              </div>
+            </div>
+        </div>
+        
+        <div class="download-group" style="margin-top: 3rem;">
+            <a href="bai1.pdf" download class="download-btn">⬇ Tải Bài 1 (PDF)</a>
+        </div>
+    </div>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

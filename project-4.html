@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Dự Án 4 | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--surface);">
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html" style="color: var(--accent);">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-container fade-in" style="padding-top: 8rem;">
+        <a href="projects.html" class="back-link">← Quay lại danh sách dự án</a>
+        
+        <div class="detail-grid">
+            <div>
+              <h3 class="detail-heading">Bài 4 — Giao Tiếp & Hợp Tác Số</h3>
+              <div class="detail-section">
+                <div class="detail-section-title">Hệ sinh thái công cụ</div>
+                <p class="detail-text"><strong>Trello</strong> = Trung tâm kiểm soát. <strong>Slack</strong> = Hệ thần kinh. <strong>Drive</strong> = Kho lưu trữ. <strong>Word Online</strong> = Bàn làm việc chung. Bốn công cụ tích hợp seamlessly để giảm phân mảnh thông tin.</p>
+              </div>
+              <div class="detail-section">
+                <div class="detail-section-title">Ba vấn đề đã giải quyết</div>
+                <ul class="result-list">
+                  <li><strong>Information overload</strong> — tạo kênh #only-files riêng cho tài liệu</li>
+                  <li><strong>Dependency delays</strong> — automation Trello → Slack notifications</li>
+                  <li><strong>Data loss</strong> — Track Changes + Version History → khôi phục 30 giây</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="detail-section">
+                <div class="detail-section-title">Chỉ số đạt được</div>
+                <ul class="result-list">
+                  <li>Cập nhật trạng thái 5 lần/tuần (+67% tiêu chuẩn)</li>
+                  <li>Tương tác Slack 18 lần/tuần</li>
+                  <li>100% task có check-list đầy đủ, không trễ deadline</li>
+                  <li>Hiệu suất nhóm từ 60–70% lên 85–90%</li>
+                </ul>
+              </div>
+              <div class="detail-section">
+                <div class="detail-section-title">Bài học rút ra</div>
+                <ol class="lesson-list">
+                  <li><strong>Lãnh đạo số = Giải quyết vấn đề trước khi xảy ra.</strong></li>
+                  <li><strong>Automation giải phóng tâm trí</strong> cho những việc sáng tạo hơn.</li>
+                  <li><strong>Transparency tạo tin tưởng</strong> — minh bạch sẽ tự quản lý nhóm.</li>
+                  <li><strong>Công cụ tốt = Đơn giản và rõ ràng,</strong> không phải "nhiều tính năng".</li>
+                </ol>
+              </div>
+            </div>
+        </div>
+        
+        <div class="download-group" style="margin-top: 3rem;">
+            <a href="bai4.pdf" download class="download-btn">⬇ Tải Bài 4 (PDF)</a>
+        </div>
+    </div>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

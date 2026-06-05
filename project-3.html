@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Dự Án 3 | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--surface);">
+
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="about.html">Về tôi</a></li>
+        <li><a href="projects.html" style="color: var(--accent);">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-container fade-in" style="padding-top: 8rem;">
+        <a href="projects.html" class="back-link">← Quay lại danh sách dự án</a>
+        
+        <div class="detail-grid">
+            <div>
+              <h3 class="detail-heading">Bài 3 — Trí Tuệ Nhân Tạo & Prompt Engineering</h3>
+              <div class="detail-section">
+                <div class="detail-section-title">Cơ chế LLM</div>
+                <p class="detail-text">AI hoạt động dựa trên dự đoán từ tiếp theo theo xác suất, không phải quy tắc cứng. Chất lượng output phụ thuộc rất nhiều vào chất lượng input (prompt).</p>
+              </div>
+              <div class="detail-section">
+                <div class="detail-section-title">6 kỹ thuật Prompt Engineering</div>
+                <ul class="result-list">
+                  <li>Đặt vai trò (Role) — "Bạn là chuyên gia..."</li>
+                  <li>Chỉ định ngữ cảnh (Context)</li>
+                  <li>Yêu cầu rõ ràng (Clear Task)</li>
+                  <li>Định dạng đầu ra (Output Format)</li>
+                  <li>Ví dụ minh họa (Examples)</li>
+                  <li>Ràng buộc (Constraints)</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="detail-section">
+                <div class="detail-section-title">Bài học rút ra</div>
+                <ol class="lesson-list">
+                  <li><strong>Prompt Engineering là kỹ năng giao tiếp.</strong> Không cần biết xây dựng LLM, chỉ cần biết "nói chuyện" với nó.</li>
+                  <li><strong>Chi tiết quyết định chất lượng.</strong> Thêm vài từ (vai trò, ví dụ, ràng buộc) có thể tốt gấp 10 lần.</li>
+                  <li><strong>AI cần được hướng dẫn rõ ràng.</strong> Nó không có "trực giác con người".</li>
+                  <li><strong>Prompt tốt tiết kiệm thời gian chỉnh sửa.</strong> Đầu tư vào prompt = tiết kiệm thời gian sau này.</li>
+                </ol>
+              </div>
+            </div>
+        </div>
+        
+        <div class="download-group" style="margin-top: 3rem;">
+            <a href="bai3.pdf" download class="download-btn">⬇ Tải Bài 3 (PDF)</a>
+        </div>
+    </div>
+
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

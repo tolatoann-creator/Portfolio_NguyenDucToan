@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về Tôi | Nguyễn Đức Toàn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAV MỚI -->
+    <nav>
+      <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Giới thiệu</a></li>
+        <li><a href="about.html" style="color: var(--accent);">Về tôi</a></li>
+        <li><a href="projects.html">Dự án</a></li>
+        <li><a href="principles.html">Nguyên tắc</a></li>
+        <li><a href="reflection.html">Reflection</a></li>
+      </ul>
+    </nav>
+
+    <!-- PHẦN 2 ẢNH ĐỨNG CẠNH NHAU -->
+    <section id="about" style="padding-top: 8rem; min-height: 80vh;">
+      <div class="section-label">Về tôi</div>
+      <div class="about-grid">
+        <div>
+          <div class="fade-in" style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+            <img src="image_8cc17b.jpg" alt="Nguyễn Đức Toàn" style="width: 50%; max-width: 260px; border-radius: 16px; box-shadow: 0 12px 32px rgba(0,0,0,0.1); object-fit: cover; aspect-ratio: 3/4;">
+            <img src="image_8cb5d6.png" alt="Nguyễn Đức Toàn" style="width: 50%; max-width: 260px; border-radius: 16px; box-shadow: 0 12px 32px rgba(0,0,0,0.1); object-fit: cover; aspect-ratio: 3/4;">
+          </div>
+          
+          <h2 class="about-heading fade-in">Không chỉ học kỹ năng — mà học cách suy nghĩ</h2>
+          <p class="about-text fade-in">Tôi là Nguyễn Đức Toàn, sinh viên chuyên ngành Trí tuệ nhân tạo, Khóa K70A - AI4. Portfolio này ghi lại hành trình học tập toàn diện qua môn "Nhập môn Công nghệ Số và Ứng dụng Trí tuệ nhân tạo".</p>
+          <p class="about-text fade-in" style="margin-top:1rem;">Với niềm đam mê khám phá cách công nghệ thay đổi xã hội và cam kết sử dụng AI một cách có trách nhiệm, tôi đã hoàn thành 6 dự án đa chiều — từ quản lý dữ liệu, nghiên cứu học thuật, đến sáng tạo nội dung số và đạo đức AI.</p>
+        </div>
+        <div class="fade-in">
+          <p style="font-size:0.85rem; color:var(--ink-3); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:1.25rem;">Ba mục tiêu cá nhân</p>
+          <ul class="goals-list">
+            <li>
+              <span class="goal-num">I</span>
+              <div class="goal-text"><span class="goal-title">Tư duy kỹ thuật thực tiễn.</span> Không chỉ hiểu lý thuyết mà còn biết cách áp dụng công nghệ để giải quyết vấn đề thực tế.</div>
+            </li>
+            <li>
+              <span class="goal-num">II</span>
+              <div class="goal-text"><span class="goal-title">Năng lực phân tích phản biện.</span> Luôn đặt câu hỏi "Nguồn gốc là gì?", "Có bias nào không?", "Nó ảnh hưởng đến ai?"</div>
+            </li>
+            <li>
+              <span class="goal-num">III</span>
+              <div class="goal-text"><span class="goal-title">Cẩm nang đạo đức AI cá nhân.</span> Công nghệ không trung lập. Mỗi quyết định thiết kế đều mang theo những giá trị.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <div class="footer-name">Nguyễn Đức Toàn</div>
+        <div class="footer-info" style="margin-top:0.5rem;">Trí tuệ nhân tạo<br>UET — Đại học Quốc gia Hà Nội</div>
+      </div>
+      <div class="footer-info" style="text-align:right;">
+        Môn học: Nhập môn Công nghệ Số &amp; Ứng dụng AI<br>
+        Học kỳ 2025–2026<br>
+      </div>
+    </footer>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
