@@ -11,13 +11,26 @@
 
     <nav>
       <a href="index.html" class="nav-logo">Nguyễn Đức Toàn</a>
-      <ul class="nav-links">
-        <li><a href="about.html">Giới thiệu</a></li>
+      
+      <!-- Nút 3 gạch (Hamburger) -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Danh sách Links -->
+      <ul class="nav-links" id="nav-links">
+        <li class="close-menu" id="close-menu">&times;</li> <!-- Nút X -->
+        <li><a href="index.html">Giới thiệu</a></li>
         <li><a href="about.html">Về tôi</a></li>
         <li><a href="projects.html" style="color: var(--accent);">Dự án</a></li>
         <li><a href="principles.html">Nguyên tắc</a></li>
         <li><a href="reflection.html">Reflection</a></li>
       </ul>
+      
+      <!-- Lớp phủ tối màn hình -->
+      <div class="menu-overlay" id="menu-overlay"></div>
     </nav>
 
     <div class="page-container fade-in" style="padding-top: 6rem; padding-left: 8%; padding-right: 8%;">

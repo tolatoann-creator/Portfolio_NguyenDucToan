@@ -645,26 +645,59 @@ footer {
   .reflection-grid, .about-grid, .detail-grid { grid-template-columns: 1fr; gap: 3rem; }
 }
 
-/* Điện thoại di động */
+/* =========================================
+   GIAO DIỆN ĐIỆN THOẠI (OFF-CANVAS MENU)
+   ========================================= */
+
+/* Định dạng cơ bản cho nút Hamburger và Overlay (Ẩn trên máy tính) */
+.menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 1001; }
+.menu-toggle .bar { width: 25px; height: 2px; background-color: var(--ink); transition: 0.3s; }
+.close-menu { display: none; font-size: 2rem; cursor: pointer; color: var(--ink-3); margin-bottom: 1rem; text-align: left; }
+.menu-overlay { display: none; }
+
 @media (max-width: 768px) {
-  .principles-grid { grid-template-columns: 1fr; }
-  .img-filler { flex-direction: column; }
+  /* Giữ logo và nút Hamburger nằm ngang hàng */
+  nav { flex-direction: row; justify-content: space-between; align-items: center; padding: 1rem 8%; }
   
-  /* Cứu thanh menu không bị văng */
-  nav { flex-direction: column; padding: 1.5rem 1rem; gap: 1rem; }
-  .nav-links { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 1rem; width: 100%; }
-  .nav-links a { font-size: 0.85rem; }
-
-  /* Bố cục lại màn hình Giới thiệu */
-  .hero { flex-direction: column !important; text-align: center; gap: 2rem !important; padding-top: 8rem; }
-  .hero h1 { font-size: clamp(2.5rem, 8vw, 3rem) !important; }
-  .hero span[style*="inline-block"] {
-    display: block !important; margin-left: 0 !important; margin-top: 1rem;
-    max-width: 100% !important; white-space: normal !important;
+  /* Hiện nút Hamburger */
+  .menu-toggle { display: flex; }
+  
+  /* Khung Menu trượt từ trái sang */
+  .nav-links {
+    position: fixed;
+    top: 0; left: -100%; /* Giấu hẳn sang mép trái */
+    width: 75%; max-width: 300px; height: 100vh;
+    background-color: var(--surface);
+    flex-direction: column; justify-content: flex-start; align-items: flex-start;
+    padding: 2rem; margin: 0; gap: 0 !important;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    transition: left 0.3s ease; /* Hiệu ứng trượt mượt mà */
+    z-index: 1000;
   }
-  .hero-meta { justify-content: center; }
+  
+  /* Lớp class dùng để kéo menu ra */
+  .nav-links.active { left: 0; }
+  
+  /* Nút X đóng menu */
+  .close-menu { display: block; align-self: flex-start; }
+  
+  /* Căn chỉnh lại các link bên trong menu */
+  .nav-links li { width: 100%; list-style: none; }
+  .nav-links a { display: block; font-size: 1.1rem; padding: 1rem 0; border-bottom: 1px solid var(--border-light); width: 100%; }
+  
+  /* Lớp phủ tối mờ màn hình bên ngoài */
+  .menu-overlay {
+    display: block; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); z-index: 999;
+    opacity: 0; visibility: hidden; transition: 0.3s;
+  }
+  .menu-overlay.active { opacity: 1; visibility: visible; }
 
-  /* Căn giữa Footer */
+  /* Căn chỉnh lại các phần khác trên mobile */
+  .hero { flex-direction: column !important; text-align: center; gap: 2rem !important; padding-top: 6rem; }
+  .hero h1 { font-size: clamp(2.5rem, 8vw, 3rem) !important; }
+  .hero span[style*="inline-block"] { display: block !important; margin-left: 0 !important; margin-top: 1rem; max-width: 100% !important; white-space: normal !important; }
+  .hero-meta { justify-content: center; }
   footer { flex-direction: column; text-align: center; gap: 2rem; }
   .footer-info { text-align: center !important; }
 }
