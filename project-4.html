@@ -109,7 +109,7 @@
         if(mobileMenu && navLinks) {
             // Khi bấm nút 3 gạch -> Ép kéo menu ra
             mobileMenu.addEventListener('click', function() {
-                navLinks.style.setProperty("left", "0", "important");
+                navLinks.classList.toggle('active');  // Dùng CSS class - sạch hơn
                 if(overlay) {
                     overlay.style.setProperty("opacity", "1", "important");
                     overlay.style.setProperty("visibility", "visible", "important");
